@@ -20,8 +20,8 @@ let value10 = (userAge >= 18);
 let value20 = (userAge >= 30 );
 let value30 = (userAge < 18);
 
-if ((userAge >= 18) === value10) {
-    if ((userAge >= 30) === value20 ) {
+if (value10) {
+    if (value20 ) {
         value20 = 'Добро пожаловать!';
     } else {
         value10 = 'дарова атец ;)';
