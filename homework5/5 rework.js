@@ -1,39 +1,50 @@
-let value;
+"use strict"
+let beer;
+let message;
 
-if (confirm("Ты хочешь пива??")) {
-    value = 'Is True';;
-} else{
-    value = 'Is False';;
+if (doesWantBeer) {
+    message = 'пошли выпьем!!!' ;
+    } else {
+    message = 'жаль, в другой раз' ;
 }
-
-const value2 = confirm("Ты хочешь пива??")
- ? 'Is True' 
- : 'Is False';
-
-console.log(value);
-console.log(value2);
-
+//
+const message2 = beer ? 'пошли выпьем!!!' : 'жаль, в другой раз';
 //
 
-let userAge = prompt('введите свой возраст?');
-let value10 = (userAge >= 18);
-let value20 = (userAge >= 30 );
-let value30 = (userAge < 18);
-
-if (value10) {
-    if (value20 ) {
-        value20 = 'Добро пожаловать!';
-    } else {
-        value10 = 'дарова атец ;)';
-    }
-} else ((userAge <18) === value30); {
-    value30 = "повзрослей малышь)";
+let userAge;
+ 
+if (userAge > 30) { 
+    ('Добро пожаловать! ');
+} else if { 
+        (userAge < 18 )("повзрослей малышь) ");
+} else {
+        ('дарова атец ;) ');
 }
+//
+const howOld = userAge > 30 ? 
+'Добро пожаловать!' : 
+(userAge > 18 ? 'повзрослей малышь' : 'Добро пожаловать!');
+//
 
-const userAge = prompt('введите свой возраст?') 
-? value20('Добро пожаловать!') 
-: value("повзрослей малышь)");
+let isTea;
+let withShugar;
 
-// 
+if (isTea && withShugar) {
+    isTea = 'чай с сахаром';
+}else if (isTea){
+    isTea = 'чай без сахара';
+}else if (withShugar){
+    isTea = 'кофе с сахаром';
+}else 
+    isTea = 'кофе без сахара';
+}
+//
+const whatDoYouWant = isTea && withShugar ? 
+    'чай с сахаром' :
+    isTea ? 
+    'чай без сахара' :
+        withShugar ? 
+        'кофе с сахаром' : 'кофе без сахара';
+//
 
-
+//

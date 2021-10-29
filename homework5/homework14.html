@@ -1,0 +1,31 @@
+function keyBy(arr, key) {
+    let result = {},
+      group;
+  
+    for (let i = 0; i < arr.length; i++) {
+      if (typeof arr[i][key] === "undefined") {
+        console.log('Key "' + key + '" does not exists', arr[i]);
+        continue;
+      }
+  
+      group = arr[i][key];
+      if (typeof result[group] === "undefined") {
+        result[group] = [];
+      }
+  
+      result[group].push(arr[i]);
+    }
+  
+    return result;
+  }
+  
+  const arr = [
+    { name: "Vasya", surname: "Ivanov" },
+    { name: "Vanya", surname: "Ivanov" },
+    { name: "Albert", surname: "Vasyliev" },
+    { _name: "Vasya - no name", surname: "Ivanov" },
+    { name: "Vasya", _surname: "Ivanov - no surname" }
+  ];
+  
+  console.log(keyBy(arr, "name"), JSON.stringify(keyBy(arr, "name")));
+  console.log(keyBy(arr, "surname"), JSON.stringify(keyBy(arr, "surname")));
